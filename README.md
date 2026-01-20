@@ -14,7 +14,7 @@ Esta API es una solución robusta basada en **FastAPI** para la clasificación i
 ---
 
 ## 🛠️ Estructura del Proyecto
-text
+```text
 .
 ├── main.py              # Código principal de la API
 ├── requirements.txt     # Dependencias del proyecto
@@ -24,6 +24,7 @@ text
         ├── preprocessor.pkl  # Pipeline de transformación (Scaler/Encoder)
         └── label_encoder.pkl # Codificador de etiquetas (Alpha/Betha)
 
+```
 
 5. **🏃 Ejecución del Servidor:**  Para iniciar la API en modo de desarrollo, ejecuta el siguiente comando:
 
