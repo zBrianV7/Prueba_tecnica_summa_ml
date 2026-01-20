@@ -32,7 +32,7 @@ Para iniciar la API en modo de desarrollo, ejecuta el siguiente comando:
 
     uvicorn main:app --reload
     La API estará disponible en: http://127.0.0.1:8000
-    
+
 5. **🖥️ Ejecución:** Interfaz de Usuario (Streamlit). Para lanzar el chat interactivo:
 
     ```Bash
@@ -41,7 +41,7 @@ Para iniciar la API en modo de desarrollo, ejecuta el siguiente comando:
 6. **Pruebas Unitarias:** Para validar el funcionamiento de los módulos de base de datos y RAG:
 
     ```Bash
-    python -m pytest tests/
+    python -m pytest tests/s
 
 📖 Documentación de la API
 FastAPI genera documentación interactiva automáticamente:
