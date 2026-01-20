@@ -1,25 +1,21 @@
 import pandas as pd
 import requests
 
-# 1. Configuración
 API_URL = "http://127.0.0.1:8000/predict"
-PATH_DATA = "data/to_predict.csv"  # Ajusta si es .xlsx o .csv
+PATH_DATA = "data/to_predict.csv"  
 
-# 2. Cargar los datos a predecir
 df_to_predict = pd.read_csv(PATH_DATA) 
 
-# 3. Asignar las demandas que ya calculaste (Punto 1)
-# Supongamos que tus predicciones fueron estas (reemplaza con tus valores reales):
+
 predicciones_demanda = {
-    "2022-05-01": 1300.06, 
-    "2022-06-01": 1309.21, 
-    "2022-07-01": 1709.79
+    "2022-05-01": 1384.59, 
+    "2022-06-01": 1386.81, 
+    "2022-07-01": 1619.51
 }
 
 
-demands = [1300.06, 1309.21, 1709.79] 
+demands = [1384.59, 1386.81, 1619.51] 
 df_to_predict['Demand'] = demands
-
 
 def get_api_classification(row):
     payload = {
@@ -49,12 +45,11 @@ def get_api_classification(row):
     except Exception as e:
         return f"Error Conexión: {str(e)}"
 
-# 5. Ejecutar la clasificación
-print("Consultando API para obtener clases Alpha/Betha...")
+
 df_to_predict['Class'] = df_to_predict.apply(get_api_classification, axis=1)
 
-# 6. Guardar el archivo FINAL de entrega
+
 df_to_predict.to_csv("resultados_finales_brian.csv", index=False)
 
-print("✅ Proceso completado exitosamente.")
+print("Proceso completado exitosamente.")
 print(df_to_predict[['autoID', 'Demand', 'Class']])
