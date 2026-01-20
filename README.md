@@ -33,7 +33,7 @@ Esta API es una solución robusta basada en **FastAPI** para la clasificación i
     La API estará disponible en: http://127.0.0.1:8000
 
 
-📖 Documentación de la API
+📖 **Documentación de la API**
 FastAPI genera documentación interactiva automáticamente:
 
 Swagger UI: http://127.0.0.1:8000/docs (Para probar el endpoint directamente).
@@ -64,10 +64,11 @@ Cuerpo de la petición (Ejemplo JSON):
   "Demand": 1200.50
 }
 
-##⚠️ Manejo de Errores
+```
+
+##⚠️ **Manejo de Errores**
 422 Unprocessable Entity: Los datos enviados son válidos en formato pero contienen valores categóricos que el modelo no conoce.
 
 500 Internal Server Error: Error inesperado en el procesamiento de la lógica del servidor.
 
 Desarrollado por: Brian - Prueba Técnica de IA Año: 2026
->>>>>>> 3f7e4f6 (Initial commit: API de Abastecimiento y Modelos de Demanda)
