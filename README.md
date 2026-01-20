@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Prueba_tecnica_summa_ml
-Punto 1 de la prueba
 =======
 # 📦 Servicio de Abastecimiento IA - API de Clasificación
 
@@ -31,10 +28,20 @@ Esta API es una solución robusta basada en **FastAPI** para la clasificación i
 ## 🏃 Ejecución del Servidor
 Para iniciar la API en modo de desarrollo, ejecuta el siguiente comando:
 
-```Bash
+    ```Bash
 
-uvicorn main:app --reload
-La API estará disponible en: http://127.0.0.1:8000
+    uvicorn main:app --reload
+    La API estará disponible en: http://127.0.0.1:8000
+    
+5. **🖥️ Ejecución:** Interfaz de Usuario (Streamlit). Para lanzar el chat interactivo:
+
+    ```Bash
+    streamlit run app.py
+
+6. **Pruebas Unitarias:** Para validar el funcionamiento de los módulos de base de datos y RAG:
+
+    ```Bash
+    python -m pytest tests/
 
 📖 Documentación de la API
 FastAPI genera documentación interactiva automáticamente:
